@@ -1,0 +1,24 @@
+﻿<Page x:Class="up.side_menu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:up"
+      mc:Ignorable="d" 
+      d:DesignHeight="360" d:DesignWidth="110"
+      Title="side_menu">
+
+    <Grid>
+		<StackPanel VerticalAlignment="Top" HorizontalAlignment="Center">
+			<Button x:Name="BGroupe" Content="Группы" Width="100" Height="30" Margin="5" Padding="5"/>
+			<Button x:Name="BCource" Content="Курсы" Width="100" Height="30" Margin="5" Padding="5"/>
+			<Button x:Name="BTeacher" Content="Преподаватели" Width="100" Height="30" Margin="5" Padding="5"/>
+			<Button x:Name="BShedule" Content="Рассписание" Width="100" Height="30" Margin="5" Padding="5"/>
+			<Button x:Name="BAttendance" Content="Посещаемость" Width="100" Height="30" Margin="5" Padding="5"/>
+			<Button x:Name="BClients" Content="Клиенты" Width="100" Height="30" Margin="5" Padding="5"/>
+			<Button x:Name="BExperience" Content="Опыт" Width="100" Height="30" Margin="5" Padding="5"/>
+			<Button x:Name="BLanguage" Content="Языки" Width="100" Height="30" Margin="5" Padding="5"/>
+			<Button x:Name="BPayment" Content="Оплата" Width="100" Height="30" Margin="5" Padding="5"/>
+		</StackPanel>
+	</Grid>
+</Page>

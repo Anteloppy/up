@@ -1,0 +1,30 @@
+﻿<Window x:Class="up.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:up"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition MaxWidth="150" MinWidth="110"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="0">
+            <Button x:Name="BGroupe" Content="Группы" Width="100" Height="30" Margin="5" Padding="5" Click="BGroupe_Click" />
+            <Button x:Name="BCource" Content="Курсы" Width="100" Height="30" Margin="5" Padding="5" Click="BCource_Click"/>
+            <Button x:Name="BTeacher" Content="Преподаватели" Width="100" Height="30" Margin="5" Padding="5" Click="BTeacher_Click"/>
+            <Button x:Name="BSchedule" Content="Рассписание" Width="100" Height="30" Margin="5" Padding="5" Click="BSchedule_Click"/>
+            <Button x:Name="BAttendance" Content="Посещаемость" Width="100" Height="30" Margin="5" Padding="5" Click="BAttendance_Click"/>
+            <Button x:Name="BClients" Content="Клиенты" Width="100" Height="30" Margin="5" Padding="5" Click="BClients_Click"/>
+            <Button x:Name="BExperience" Content="Опыт" Width="100" Height="30" Margin="5" Padding="5" Click="BExperience_Click"/>
+            <Button x:Name="BLanguage" Content="Языки" Width="100" Height="30" Margin="5" Padding="5" Click="BLanguage_Click"/>
+            <Button x:Name="BPayment" Content="Оплата" Width="100" Height="30" Margin="5" Padding="5" Click="BPayment_Click"/>
+            <Button x:Name="BReport" Content="Отчёты" Width="100" Height="30" Margin="5" Padding="5" Click="BReport_Click"/>
+        </StackPanel>
+        <!--<Frame Grid.Column="0" x:Name="frameS" NavigationUIVisibility="Hidden"/>-->
+        <Frame Grid.Column="1" x:Name="frameM" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>
