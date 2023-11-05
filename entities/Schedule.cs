@@ -9,7 +9,7 @@ namespace up.entities
     class Schedule
     {
         public int id { get; set; }
-        public DateTime day { get; set; }
-        public DateTime time { get; set; }
+        public DateOnly день { get; set; }
+        public TimeOnly время { get; set; }
     }
 }

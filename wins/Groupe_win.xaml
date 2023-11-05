@@ -10,25 +10,10 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="75"/>
+            <RowDefinition Height="10"/>
             <RowDefinition/>
             <RowDefinition Height="10"/>
         </Grid.RowDefinitions>
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
-            <Button Content="Добавить" Margin="10" Padding="5"/>
-            <Button Content="Убрать" Margin="10" Padding="5"/>
-        </StackPanel>
-        <DataGrid x:Name="DGGroupe" Grid.Row="1" AutoGenerateColumns="False">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="id" Binding="{Binding id}"/>
-                <DataGridTextColumn Header="course" Binding="{Binding course_id}"/>
-                <DataGridTextColumn Header="client" Binding="{Binding client_id}"/>
-                <DataGridTextColumn Header="teacher" Binding="{Binding teacher_id}"/>
-                <DataGridTextColumn Header="point_quantity" Binding="{Binding point_quantity}"/>
-                <DataGridTextColumn Header="load_point" Binding="{Binding load_point}"/>
-                <DataGridTextColumn Header="schedule" Binding="{Binding schedule_id}"/>
-                <DataGridTextColumn Header="attendance" Binding="{Binding attendance_id}"/>
-            </DataGrid.Columns>
-        </DataGrid>
+        <DataGrid x:Name="DGGroupe" Grid.Row="1" AutoGenerateColumns="True"/>
     </Grid>
 </Page>

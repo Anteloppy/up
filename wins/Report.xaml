@@ -9,6 +9,18 @@
       Title="Report">
 
     <Grid>
-        <Label Content="аааа" Background="Blue"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"/>
+            <RowDefinition/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
+            <Button x:Name="RB1" Content="Отчёт 1" Margin="10" Padding="5" Click="RB1_Click"/>
+            <Button x:Name="RB2" Content="Отчёт 2" Margin="10" Padding="5" Click="RB2_Click"/>
+        </StackPanel>
+        <Grid  Grid.Row="1">
+            <Label x:Name="report1" Content="аааа" Background="Blue" Visibility="Hidden"/>
+            <Label x:Name="report2" Content="бббб" Background="Green" Visibility="Hidden"/>
+        </Grid>
     </Grid>
 </Page>

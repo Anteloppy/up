@@ -9,7 +9,7 @@ namespace up.entities
     class Attendance
     {
         public int id { get; set; }
-        public DateTime visit_date { get; set; }
-        public int visiting { get; set; }
+        public DateTime расписание { get; set; }
+        public string посещаемость { get; set; }
     }
 }

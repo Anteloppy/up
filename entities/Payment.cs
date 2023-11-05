@@ -9,9 +9,9 @@ namespace up.entities
     class Payment
     {
         public int id { get; set; }
-        public int client_id { get; set; }
-        public int course_id { get; set; }
-        public int cost { get; set; }
-        public DateTime pay_date { get; set; }
+        public string клиент { get; set; }
+        public string курс { get; set; }
+        public int стоимость { get; set; }
+        public DateOnly дата_оплаты { get; set; }
     }
 }

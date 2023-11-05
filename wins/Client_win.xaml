@@ -1,4 +1,4 @@
-﻿<Page x:Class="up.wins.Clients_win"
+﻿<Page x:Class="up.wins.Client_win"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:up.wins"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Clients_win">
+      Title="Client_win">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -15,11 +15,9 @@
             <RowDefinition Height="10"/>
         </Grid.RowDefinitions>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
-            <Button Content="Добавить" Margin="15"/>
-            <Button Content="Убрать" Margin="15"/>
+            <Button Content="Добавить" Margin="10" Padding="5"/>
+            <Button Content="Убрать" Margin="10" Padding="5"/>
         </StackPanel>
-        <DataGrid Grid.Row="1">
-
-        </DataGrid>
+        <DataGrid x:Name="DGClient" Grid.Row="1" AutoGenerateColumns="True"/>
     </Grid>
 </Page>

@@ -9,12 +9,12 @@ namespace up.entities
     class Groupe
     {
         public int id { get; set; }
-        public int course_id { get; set; }
-        public int client_id { get; set; }
-        public int teacher_id { get; set; }
-        public int point_quantity { get; set; }
-        public int load_point { get; set; }
-        public int schedule_id { get; set; }
-        public int attendance_id { get; set; }
+        public string курс { get; set; }
+        public string клиент { get; set; }
+        public string преподаватель { get; set; }
+        public int мест { get; set; }
+        public int занято { get; set; }
+        public string рассписание { get; set; }
+        public string посещаемость { get; set; }
     }
 }

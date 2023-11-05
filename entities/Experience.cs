@@ -9,7 +9,7 @@ namespace up.entities
     class Experience
     {
         public int id { get; set; }
-        public string proficiency_level { get; set; }
-        public int language_id { get; set; }
+        public string уровень_владения { get; set; }
+        public string язык { get; set; }
     }
 }

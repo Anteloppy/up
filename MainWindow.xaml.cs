@@ -27,26 +27,76 @@ namespace up
             InitializeComponent();
             //frameS.Navigate(new side_menu());
         }
-        
 
-        private void BGroupe_Click(object sender, RoutedEventArgs e) => frameM.Navigate(new Groupe_win());
+        private void BAdd_Click(object sender, RoutedEventArgs e)
+        {
+            add_win a = new add_win();
+            a.Show();
+        }
 
-        private void BCource_Click(object sender, RoutedEventArgs e) => frameM.Navigate(new Course_win());
+        private void BRemove_Click(object sender, RoutedEventArgs e)
+        {
 
-        private void BTeacher_Click(object sender, RoutedEventArgs e) => frameM.Navigate(new Teacher_win());
+        }
 
-        private void BSchedule_Click(object sender, RoutedEventArgs e) => frameM.Navigate(new Schedule_win());
+        private void BGroupe_Click(object sender, RoutedEventArgs e)
+        {
+            frameM.Navigate(new Groupe_win());
+            Title = "Группы";
+        }
 
-        private void BAttendance_Click(object sender, RoutedEventArgs e) => frameM.Navigate(new Attendance_win());
+        private void BCource_Click(object sender, RoutedEventArgs e)
+        {
+            frameM.Navigate(new Course_win());
+            Title = "Курсы";
+        }
 
-        private void BClients_Click(object sender, RoutedEventArgs e) => frameM.Navigate(new Clients_win());
+        private void BTeacher_Click(object sender, RoutedEventArgs e)
+        {
+            frameM.Navigate(new Teacher_win());
+            Title = "Преподаватели";
+        }
 
-        private void BExperience_Click(object sender, RoutedEventArgs e) => frameM.Navigate(new Experience_win());
+        private void BSchedule_Click(object sender, RoutedEventArgs e)
+        {
+            frameM.Navigate(new Schedule_win());
+            Title = "Рассписание";
+        }
 
-        private void BLanguage_Click(object sender, RoutedEventArgs e) => frameM.Navigate(new Language_win());
+        private void BAttendance_Click(object sender, RoutedEventArgs e)
+        {
+            frameM.Navigate(new Attendance_win());
+            Title = "Посещаемость";
+        }
 
-        private void BPayment_Click(object sender, RoutedEventArgs e) => frameM.Navigate(new Payment_win());
+        private void BClient_Click(object sender, RoutedEventArgs e)
+        {
+            frameM.Navigate(new Client_win());
+            Title = "Клиенты";
+        }
 
-        private void BReport_Click(object sender, RoutedEventArgs e) => frameM.Navigate(new Report());
+        private void BExperience_Click(object sender, RoutedEventArgs e)
+        {
+            frameM.Navigate(new Experience_win());
+            Title = "Опыт";
+        }
+
+        private void BLanguage_Click(object sender, RoutedEventArgs e)
+        {
+            frameM.Navigate(new Language_win());
+            Title = "Языки";
+        }
+
+        private void BPayment_Click(object sender, RoutedEventArgs e)
+        {
+            frameM.Navigate(new Payment_win());
+            Title = "Оплата";
+        }
+
+        private void BReport_Click(object sender, RoutedEventArgs e)
+        {
+            frameM.Navigate(new Report());
+            Title = "Отчёты";
+        }
     }
 }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:up"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="500" Width="810">
     <Grid>
 		<Grid.ColumnDefinitions>
 			<ColumnDefinition MaxWidth="150" MinWidth="110"/>
@@ -13,12 +13,14 @@
             <ColumnDefinition Width="10"/>
         </Grid.ColumnDefinitions>
         <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="0">
+            <Button x:Name="BAdd" Content="Добавление" Width="100" Height="30" Margin="5" Padding="5" Click="BAdd_Click" Background="#FF80FF54" BorderBrush="#FF217F00"/>
+            <Button x:Name="BRemove" Content="Удаление" Width="100" Height="30" Margin="5" Padding="5" Click="BRemove_Click" Background="#FFFF5D6C" BorderBrush="#FF7F0029"/>
             <Button x:Name="BGroupe" Content="Группы" Width="100" Height="30" Margin="5" Padding="5" Click="BGroupe_Click" />
             <Button x:Name="BCource" Content="Курсы" Width="100" Height="30" Margin="5" Padding="5" Click="BCource_Click"/>
             <Button x:Name="BTeacher" Content="Преподаватели" Width="100" Height="30" Margin="5" Padding="5" Click="BTeacher_Click"/>
             <Button x:Name="BSchedule" Content="Рассписание" Width="100" Height="30" Margin="5" Padding="5" Click="BSchedule_Click"/>
             <Button x:Name="BAttendance" Content="Посещаемость" Width="100" Height="30" Margin="5" Padding="5" Click="BAttendance_Click"/>
-            <Button x:Name="BClients" Content="Клиенты" Width="100" Height="30" Margin="5" Padding="5" Click="BClients_Click"/>
+            <Button x:Name="BClient" Content="Клиенты" Width="100" Height="30" Margin="5" Padding="5" Click="BClient_Click"/>
             <Button x:Name="BExperience" Content="Опыт" Width="100" Height="30" Margin="5" Padding="5" Click="BExperience_Click"/>
             <Button x:Name="BLanguage" Content="Языки" Width="100" Height="30" Margin="5" Padding="5" Click="BLanguage_Click"/>
             <Button x:Name="BPayment" Content="Оплата" Width="100" Height="30" Margin="5" Padding="5" Click="BPayment_Click"/>

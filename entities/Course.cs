@@ -9,10 +9,10 @@ namespace up.entities
     class Course
     {
         public int id { get; set; }
-        public string name { get; set; }
-        public int duration { get; set; }
-        public int lvl { get; set; }
-        public int price { get; set; }
-        public int language_id { get; set; }
+        public string название { get; set; }
+        public int длительность { get; set; }
+        public int уровень { get; set; }
+        public int цена { get; set; }
+        public string язык { get; set; }
     }
 }

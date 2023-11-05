@@ -9,6 +9,6 @@ namespace up.entities
     class Language
     {
         public int id { get; set; }
-        public string name { get; set; }
+        public string язык { get; set; }
     }
 }

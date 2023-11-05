@@ -10,19 +10,25 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace up.wins
+namespace up
 {
     /// <summary>
-    /// Логика взаимодействия для Clients_win.xaml
+    /// Логика взаимодействия для remove_win.xaml
     /// </summary>
-    public partial class Clients_win : Page
+    public partial class remove_win : Window
     {
-        public Clients_win()
+        public remove_win()
         {
             InitializeComponent();
+            //ItemCollection collection = new ItemCollection();
+            //CB.ItemsSource = collection;
+        }
+
+        private void BRemove_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

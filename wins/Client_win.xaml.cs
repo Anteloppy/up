@@ -21,11 +21,11 @@ using Org.BouncyCastle.Tls.Crypto;
 namespace up.wins
 {
     /// <summary>
-    /// Логика взаимодействия для Payment_win.xaml
+    /// Логика взаимодействия для Clients_win.xaml
     /// </summary>
-    public partial class Payment_win : Page
+    public partial class Client_win : Page
     {
-        public Payment_win()
+        public Client_win()
         {
             InitializeComponent();
             LoadData();
@@ -33,29 +33,31 @@ namespace up.wins
         private static string connectionString = "server=localhost; port=3306; database=UP; user=root; password=Nimda123;";
         private void LoadData()
         {
-            List<Payment> payments = new List<Payment>();
+            List<Client> clients = new List<Client>();
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                MySqlCommand cmd = new MySqlCommand("select p.id, co.name as course, concat(c.name, ' ', c.surname) as client, p.cost, p.pay_date from payments as p join courses as co on p.course_id = co.id join clients as c on p.client_id = c.id", conn);
+                MySqlCommand cmd = new MySqlCommand("select * from clients", conn);
 
 
                 using (MySqlDataReader reader = cmd.ExecuteReader())
                 {
                     while (reader.Read())
                     {
-                        Payment record = new Payment();
+                        Client record = new Client();
                         record.id = reader.GetInt32("id");
-                        record.курс = reader.GetString("course");
-                        record.клиент = reader.GetString("client");
-                        record.стоимость = reader.GetInt32("cost");
-                        record.дата_оплаты = DateOnly.FromDateTime(reader.GetDateTime("pay_date"));
+                        record.имя = reader.GetString("name");
+                        record.фамилия = reader.GetString("surname");
+                        record.контакты = reader.GetString("contact");
+                        record.дата_рождения = DateOnly.FromDateTime(reader.GetDateTime("birth_date"));
+                        record.опыт = reader.GetInt32("experience_id");
+                        record.потребности = reader.GetString("requirement");
 
-                        payments.Add(record);
+                        clients.Add(record);
                     }
                 }
             }
-            DGPayment.ItemsSource = payments;
+            DGClient.ItemsSource = clients;
         }
     }
 }
