@@ -243,17 +243,5 @@ namespace up.wins
                 default: break;
             }
         }
-
-        private void RB1_Click(object sender, RoutedEventArgs e)
-        {
-            report1.Visibility = Visibility.Visible;
-            report2.Visibility = Visibility.Hidden;
-        }
-
-        private void RB2_Click(object sender, RoutedEventArgs e)
-        {
-            report2.Visibility = Visibility.Visible;
-            report1.Visibility = Visibility.Hidden;
-        }
     }
 }
