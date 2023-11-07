@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:up"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="810">
+        Title="MainWindow" Height="465" Width="810">
     <Grid>
 		<Grid.ColumnDefinitions>
 			<ColumnDefinition MaxWidth="150" MinWidth="110"/>
@@ -14,7 +14,6 @@
         </Grid.ColumnDefinitions>
         <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="0">
             <Button x:Name="BAdd" Content="Добавление" Width="100" Height="30" Margin="5" Padding="5" Click="BAdd_Click" Background="#FF80FF54" BorderBrush="#FF217F00"/>
-            <Button x:Name="BRemove" Content="Удаление" Width="100" Height="30" Margin="5" Padding="5" Click="BRemove_Click" Background="#FFFF5D6C" BorderBrush="#FF7F0029"/>
             <Button x:Name="BGroupe" Content="Группы" Width="100" Height="30" Margin="5" Padding="5" Click="BGroupe_Click" />
             <Button x:Name="BCource" Content="Курсы" Width="100" Height="30" Margin="5" Padding="5" Click="BCource_Click"/>
             <Button x:Name="BTeacher" Content="Преподаватели" Width="100" Height="30" Margin="5" Padding="5" Click="BTeacher_Click"/>
@@ -26,7 +25,6 @@
             <Button x:Name="BPayment" Content="Оплата" Width="100" Height="30" Margin="5" Padding="5" Click="BPayment_Click"/>
             <Button x:Name="BReport" Content="Отчёты" Width="100" Height="30" Margin="5" Padding="5" Click="BReport_Click"/>
         </StackPanel>
-        <!--<Frame Grid.Column="0" x:Name="frameS" NavigationUIVisibility="Hidden"/>-->
         <Frame Grid.Column="1" x:Name="frameM" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>
