@@ -25,18 +25,12 @@ namespace up
         public MainWindow()
         {
             InitializeComponent();
-            //frameS.Navigate(new side_menu());
         }
 
         private void BAdd_Click(object sender, RoutedEventArgs e)
         {
             add_win a = new add_win();
             a.Show();
-        }
-
-        private void BRemove_Click(object sender, RoutedEventArgs e)
-        {
-
         }
 
         private void BGroupe_Click(object sender, RoutedEventArgs e)
