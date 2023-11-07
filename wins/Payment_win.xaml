@@ -14,7 +14,6 @@
             <RowDefinition/>
             <RowDefinition Height="10"/>
         </Grid.RowDefinitions>
-        </StackPanel>
         <DataGrid x:Name="DGPayment" Grid.Row="1" AutoGenerateColumns="True"/>
     </Grid>
 </Page>
