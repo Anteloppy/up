@@ -59,7 +59,7 @@ namespace up.add_wins
                     add = "insert into clients(name, surname, contact, birth_date, experience_id, requirement) values('" + TBname.Text + "', '" + TBsurname.Text + "', '" + TBcontact.Text + "', str_to_date('" + TBbirth_date.Text + "', '%d.%m.%Y'), '" + Convert.ToInt32(TBexperience_id.Text) + "', '" + TBrequirement.Text + "'); commit;";
                     break;
                 default:
-                    MessageBox.Show("всё сломалось");
+                    MessageBox.Show("ошибка формата даты");
                     break;
             }
             MySqlConnection conn = new MySqlConnection(connectionString);
