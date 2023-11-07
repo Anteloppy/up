@@ -23,10 +23,7 @@ namespace up
     /// </summary>
     public partial class add_win : Window
     {
-        public add_win()
-        {
-            InitializeComponent();
-        }
+        public add_win() => InitializeComponent();
         private void BAddGroupe_Click(object sender, RoutedEventArgs e)
         {
             frameM.Navigate(new groupe_add());

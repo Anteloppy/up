@@ -22,10 +22,7 @@ namespace up
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
-        {
-            InitializeComponent();
-        }
+        public MainWindow() => InitializeComponent();
 
         private void BAdd_Click(object sender, RoutedEventArgs e)
         {
