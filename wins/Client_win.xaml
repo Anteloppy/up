@@ -14,9 +14,6 @@
             <RowDefinition/>
             <RowDefinition Height="10"/>
         </Grid.RowDefinitions>
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
-            <Button Content="Добавить" Margin="10" Padding="5"/>
-        </StackPanel>
         <DataGrid x:Name="DGClient" Grid.Row="1" AutoGenerateColumns="True"/>
     </Grid>
 </Page>
