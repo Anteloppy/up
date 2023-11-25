@@ -8,21 +8,21 @@
         Title="AddWindow" Height="410" Width="500">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition MaxWidth="170" MinWidth="160"/>
+            <ColumnDefinition MaxWidth="150" MinWidth="110"/>
             <ColumnDefinition/>
             <ColumnDefinition Width="10"/>
         </Grid.ColumnDefinitions>
         <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="0">
             <Label Content="Добавить в:" HorizontalAlignment="Center" Padding="5"/>
-            <Button x:Name="BAddAccount" Content="Счета" Width="100" Height="30" Margin="5" Padding="5" Click="BAddAccount_Click" />
-            <Button x:Name="BAddAuditLog" Content="Аудиты" Width="100" Height="30" Margin="5" Padding="5" Click="BAddAuditLog_Click"/>
-            <Button x:Name="BAddBalance" Content="Баланс" Width="100" Height="30" Margin="5" Padding="5" Click="BAddBalance_Click"/>
-            <Button x:Name="BAddClient" Content="Клиенты" Width="100" Height="30" Margin="5" Padding="5" Click="BAddClient_Click_1"/>
-            <Button x:Name="BAddFinancialTransaction" Content="Финансовые операции" Width="150" Height="30" Margin="5" Padding="5" Click="BAddFinancialTransaction_Click"/>
-            <Button x:Name="BAddIncomeExpense" Content="Доходы расходы" Width="100" Height="30" Margin="5" Padding="5" Click="BAddIncomeExpense_Click"/>
-            <Button x:Name="BAddSupplier" Content="Поставщики" Width="100" Height="30" Margin="5" Padding="5" Click="BAddSupplier_Click"/>
-            <Button x:Name="BAddTaxRecord" Content="Налоговый учёт" Width="100" Height="30" Margin="5" Padding="5" Click="BAddTaxRecord_Click"/>
-            <Button x:Name="BAddUser" Content="Пользователи" Width="100" Height="30" Margin="5" Padding="5" Click="BAddUser_Click"/>
+            <Button x:Name="BAddGroupe" Content="Группы" Width="100" Height="30" Margin="5" Padding="5" Click="BAddGroupe_Click"/>
+            <Button x:Name="BAddCource" Content="Курсы" Width="100" Height="30" Margin="5" Padding="5" Click="BAddCource_Click"/>
+            <Button x:Name="BAddTeacher" Content="Преподаватели" Width="100" Height="30" Margin="5" Padding="5" Click="BAddTeacher_Click"/>
+            <Button x:Name="BAddSchedule" Content="Рассписание" Width="100" Height="30" Margin="5" Padding="5" Click="BAddSchedule_Click"/>
+            <Button x:Name="BAddAttendance" Content="Посещаемость" Width="100" Height="30" Margin="5" Padding="5" Click="BAddAttendance_Click"/>
+            <Button x:Name="BAddClient" Content="Клиенты" Width="100" Height="30" Margin="5" Padding="5" Click="BAddClient_Click"/>
+            <Button x:Name="BAddExperience" Content="Опыт" Width="100" Height="30" Margin="5" Padding="5" Click="BAddExperience_Click"/>
+            <Button x:Name="BAddLanguage" Content="Языки" Width="100" Height="30" Margin="5" Padding="5" Click="BAddLanguage_Click"/>
+            <Button x:Name="BAddPayment" Content="Оплата" Width="100" Height="30" Margin="5" Padding="5" Click="BAddPayment_Click"/>
         </StackPanel>
         <Frame Grid.Column="1" x:Name="frameM" NavigationUIVisibility="Hidden"/>
     </Grid>

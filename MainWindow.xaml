@@ -5,24 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:up"
         mc:Ignorable="d"
-        Title="MainWindow" Height="420" Width="810">
+        Title="MainWindow" Height="465" Width="810">
     <Grid>
 	<Grid.ColumnDefinitions>
-	    <ColumnDefinition MaxWidth="170" MinWidth="160"/>
+	    <ColumnDefinition MaxWidth="150" MinWidth="110"/>
             <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="10"/>
         </Grid.ColumnDefinitions>
         <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="0">
             <Button x:Name="BAdd" Content="Добавление" Width="100" Height="30" Margin="5" Padding="5" Click="BAdd_Click" Background="#FF80FF54" BorderBrush="#FF217F00"/>
-            <Button x:Name="BAccount" Content="Счета" Width="100" Height="30" Margin="5" Padding="5" Click="BAccount_Click" />
-            <Button x:Name="BAuditLog" Content="Аудиты" Width="100" Height="30" Margin="5" Padding="5" Click="BAuditLog_Click"/>
-            <Button x:Name="BBalance" Content="Баланс" Width="100" Height="30" Margin="5" Padding="5" Click="BBalance_Click"/>
-            <Button x:Name="BClient" Content="Клиенты" Width="100" Height="30" Margin="5" Padding="5" Click="BClient_Click_1"/>
-            <Button x:Name="BFinancialTransaction" Content="Финансовые операции" Width="150" Height="30" Margin="5" Padding="5" Click="BFinancialTransaction_Click"/>
-            <Button x:Name="BIncomeExpense" Content="Доходы и расходы" Width="120" Height="30" Margin="5" Padding="5" Click="BIncomeExpense_Click"/>
-            <Button x:Name="BSupplier" Content="Поставщики" Width="100" Height="30" Margin="5" Padding="5" Click="BSupplier_Click"/>
-            <Button x:Name="BTaxRecord" Content="Налоговый учёт" Width="100" Height="30" Margin="5" Padding="5" Click="BTaxRecord_Click"/>
-            <Button x:Name="BUser" Content="Пользователи" Width="100" Height="30" Margin="5" Padding="5" Click="BUser_Click"/>
+            <Button x:Name="BGroupe" Content="Группы" Width="100" Height="30" Margin="5" Padding="5" Click="BGroupe_Click" />
+            <Button x:Name="BCource" Content="Курсы" Width="100" Height="30" Margin="5" Padding="5" Click="BCource_Click"/>
+            <Button x:Name="BTeacher" Content="Преподаватели" Width="100" Height="30" Margin="5" Padding="5" Click="BTeacher_Click"/>
+            <Button x:Name="BSchedule" Content="Рассписание" Width="100" Height="30" Margin="5" Padding="5" Click="BSchedule_Click"/>
+            <Button x:Name="BAttendance" Content="Посещаемость" Width="100" Height="30" Margin="5" Padding="5" Click="BAttendance_Click"/>
+            <Button x:Name="BClient" Content="Клиенты" Width="100" Height="30" Margin="5" Padding="5" Click="BClient_Click"/>
+            <Button x:Name="BExperience" Content="Опыт" Width="100" Height="30" Margin="5" Padding="5" Click="BExperience_Click"/>
+            <Button x:Name="BLanguage" Content="Языки" Width="100" Height="30" Margin="5" Padding="5" Click="BLanguage_Click"/>
+            <Button x:Name="BPayment" Content="Оплата" Width="100" Height="30" Margin="5" Padding="5" Click="BPayment_Click"/>
+            <Button x:Name="BReport" Content="Отчёты" Width="100" Height="30" Margin="5" Padding="5" Click="BReport_Click"/>
         </StackPanel>
         <Frame Grid.Column="1" x:Name="frameM" NavigationUIVisibility="Hidden"/>
     </Grid>

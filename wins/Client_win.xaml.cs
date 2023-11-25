@@ -30,14 +30,15 @@ namespace up.wins
             InitializeComponent();
             LoadData();
         }
-        private static string connectionString = "server=localhost; port=3306; database=accounting_finance; user=root; password=Nimda123;";
+        private static string connectionString = "server=localhost; port=3306; database=UP; user=root; password=Nimda123;";
         private void LoadData()
         {
             List<Client> clients = new List<Client>();
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                MySqlCommand cmd = new MySqlCommand("select id, company_name, address, phone, email from suppliers", conn);
+                MySqlCommand cmd = new MySqlCommand("select * from clients", conn);
+
 
                 using (MySqlDataReader reader = cmd.ExecuteReader())
                 {
@@ -45,10 +46,12 @@ namespace up.wins
                     {
                         Client record = new Client();
                         record.id = reader.GetInt32("id");
-                        record.компания = reader.GetString("company_name");
-                        record.адрес = reader.GetString("type");
-                        record.телефон = reader.GetString("phone");
-                        record.почта = reader.GetString("email");
+                        record.имя = reader.GetString("name");
+                        record.фамилия = reader.GetString("surname");
+                        record.контакты = reader.GetString("contact");
+                        record.дата_рождения = DateOnly.FromDateTime(reader.GetDateTime("birth_date"));
+                        record.опыт = reader.GetInt32("experience_id");
+                        record.потребности = reader.GetString("requirement");
 
                         clients.Add(record);
                     }

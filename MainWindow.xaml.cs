@@ -89,59 +89,5 @@ namespace up
             frameM.Navigate(new Report());
             Title = "Отчёты";
         }
-
-        private void BAccount_Click(object sender, RoutedEventArgs e)
-        {
-            frameM.Navigate(new Account_win());
-            Title = "Аккаунты";
-        }
-
-        private void BAuditLog_Click(object sender, RoutedEventArgs e)
-        {
-            frameM.Navigate(new AuditLog_win());
-            Title = "Аудиты";
-        }
-
-        private void BBalance_Click(object sender, RoutedEventArgs e)
-        {
-            frameM.Navigate(new Balance_win());
-            Title = "Баланс";
-        }
-
-        private void BClient_Click_1(object sender, RoutedEventArgs e)
-        {
-            frameM.Navigate(new Client_win());
-            Title = "Клиенты";
-        }
-
-        private void BFinancialTransaction_Click(object sender, RoutedEventArgs e)
-        {
-            frameM.Navigate(new FinancialTransaction_win());
-            Title = "Финансовые операции";
-        }
-
-        private void BIncomeExpense_Click(object sender, RoutedEventArgs e)
-        {
-            frameM.Navigate(new IncomeExpense_win());
-            Title = "Доходы и расходы";
-        }
-
-        private void BSupplier_Click(object sender, RoutedEventArgs e)
-        {
-            frameM.Navigate(new Supplier_win());
-            Title = "Поставщики";
-        }
-
-        private void BTaxRecord_Click(object sender, RoutedEventArgs e)
-        {
-            frameM.Navigate(new TaxRecord_win());
-            Title = "Налоговый учёт";
-        }
-
-        private void BUser_Click(object sender, RoutedEventArgs e)
-        {
-            frameM.Navigate(new User_win());
-            Title = "Пользователи";
-        }
     }
 }

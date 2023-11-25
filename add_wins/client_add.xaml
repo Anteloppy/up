@@ -13,24 +13,28 @@
         <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="0" Orientation="Vertical" Width="300" Margin="5">
             <Button x:Name="BAdd" Content="Добавление" Width="100" Height="30" Margin="5" Padding="5" Click="Add_Click" Background="#FF80FF54" BorderBrush="#FF217F00"/>
             <StackPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Right">
-                <Label Content="id клиента: " HorizontalAlignment="Center" Padding="5" Margin="5"/>
-                <TextBox x:Name="TBclient_id" Width="150" Padding="5" Height="25" HorizontalAlignment="Center"/>
+                <Label Content="имя" HorizontalAlignment="Center" Padding="5" Margin="5"/>
+                <TextBox x:Name="TBname" Width="150" Padding="5" Height="25" HorizontalAlignment="Center"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Right">
-                <Label Content="компания: " HorizontalAlignment="Center" Padding="5" Margin="5"/>
-                <TextBox x:Name="TBcompany_name" Width="150" Padding="5" Height="25" HorizontalAlignment="Center"/>
+                <Label Content="фамилия" HorizontalAlignment="Center" Padding="5" Margin="5"/>
+                <TextBox x:Name="TBsurname" Width="150" Padding="5" Height="25" HorizontalAlignment="Center"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Right">
-                <Label Content="адрес: " HorizontalAlignment="Center" Padding="5" Margin="5"/>
-                <TextBox x:Name="TBaddress" Width="150" Padding="5" Height="25" HorizontalAlignment="Center"/>
+                <Label Content="контакты" HorizontalAlignment="Center" Padding="5" Margin="5"/>
+                <TextBox x:Name="TBcontact" Width="150" Padding="5" Height="25" HorizontalAlignment="Center"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Right">
-                <Label Content="телефон" HorizontalAlignment="Center" Padding="5" Margin="5"/>
-                <TextBox x:Name="TBphone" Width="150" Padding="5" Height="25" HorizontalAlignment="Center"/>
+                <Label Content="дата рождения" HorizontalAlignment="Center" Padding="5" Margin="5"/>
+                <TextBox x:Name="TBbirth_date" Width="150" Padding="5" Height="25" HorizontalAlignment="Center"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Right">
-                <Label Content="почта" HorizontalAlignment="Center" Padding="5" Margin="5"/>
-                <TextBox x:Name="TBemail" Width="150" Padding="5" Height="25" HorizontalAlignment="Center"/>
+                <Label Content="id опыта" HorizontalAlignment="Center" Padding="5" Margin="5"/>
+                <TextBox x:Name="TBexperience_id" Width="150" Padding="5" Height="25" HorizontalAlignment="Center"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Right">
+                <Label Content="потребности" HorizontalAlignment="Center" Padding="5" Margin="5"/>
+                <TextBox x:Name="TBrequirement" Width="150" Padding="5" Height="25" HorizontalAlignment="Center"/>
             </StackPanel>
         </StackPanel>
     </Grid>
