@@ -13,19 +13,16 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Data;
-using System.Configuration;
 using up.entities;
-using Org.BouncyCastle.Tls.Crypto;
 
 namespace up.wins
 {
     /// <summary>
-    /// Логика взаимодействия для Clients_win.xaml
+    /// Логика взаимодействия для FinancialTransaction_win.xaml
     /// </summary>
-    public partial class Client_win : Page
+    public partial class FinancialTransaction_win : Page
     {
-        public Client_win()
+        public FinancialTransaction_win()
         {
             InitializeComponent();
             LoadData();
@@ -33,28 +30,28 @@ namespace up.wins
         private static string connectionString = "server=localhost; port=3306; database=accounting_finance; user=root; password=Nimda123;";
         private void LoadData()
         {
-            List<Client> clients = new List<Client>();
+            List<FinancialTransaction> financialTransactions = new List<FinancialTransaction>();
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                MySqlCommand cmd = new MySqlCommand("select id, company_name, address, phone, email from suppliers", conn);
+                MySqlCommand cmd = new MySqlCommand("select f.id, f.date, f.type, f.amount, s.owner, r.owner from financial_transactions as f join accounts as s on f.sender = s.id join accounts as r on f.receiver = r.id", conn);
 
                 using (MySqlDataReader reader = cmd.ExecuteReader())
                 {
                     while (reader.Read())
                     {
-                        Client record = new Client();
+                        FinancialTransaction record = new FinancialTransaction();
                         record.id = reader.GetInt32("id");
-                        record.компания = reader.GetString("company_name");
-                        record.адрес = reader.GetString("type");
-                        record.телефон = reader.GetString("phone");
-                        record.почта = reader.GetString("email");
+                        record.дата = DateOnly.FromDateTime(reader.GetDateTime("datetime"));
+                        record.тип = reader.GetString("type");
+                        record.отправитель = reader.GetString("sender");
+                        record.получатель = reader.GetString("receiver");
 
-                        clients.Add(record);
+                        financialTransactions.Add(record);
                     }
                 }
             }
-            DGClient.ItemsSource = clients;
+            DGFinancialTransaction.ItemsSource = financialTransactions;
         }
     }
 }

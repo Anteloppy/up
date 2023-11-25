@@ -54,11 +54,11 @@ namespace up
             Title = "Добавление в посещаемость";
         }
 
-        private void BAddClient_Click(object sender, RoutedEventArgs e)
-        {
-            frameM.Navigate(new client_add());
-            Title = "Добавление в клиенты";
-        }
+        //private void BAddClient_Click(object sender, RoutedEventArgs e)
+        //{
+        //    frameM.Navigate(new client_add());
+        //    Title = "Добавление в клиенты";
+        //}
 
         private void BAddExperience_Click(object sender, RoutedEventArgs e)
         {
@@ -76,6 +76,60 @@ namespace up
         {
             frameM.Navigate(new payment_add());
             Title = "Добавление в оплата";
+        }
+
+        private void BAddAccount_Click(object sender, RoutedEventArgs e)
+        {
+            frameM.Navigate(new Account_add());
+            Title = "Добавление в аккаунты";
+        }
+
+        private void BAddAuditLog_Click(object sender, RoutedEventArgs e)
+        {
+            frameM.Navigate(new AuditLog_add());
+            Title = "Добавление в аудиты";
+        }
+
+        private void BAddBalance_Click(object sender, RoutedEventArgs e)
+        {
+            frameM.Navigate(new Balance_add());
+            Title = "Добавление в баланс";
+        }
+
+        private void BAddClient_Click_1(object sender, RoutedEventArgs e)
+        {
+            frameM.Navigate(new client_add());
+            Title = "Добавление в клиенты";
+        }
+
+        private void BAddFinancialTransaction_Click(object sender, RoutedEventArgs e)
+        {
+            frameM.Navigate(new FinancialTransaction_add());
+            Title = "Добавление в финансовые операции";
+        }
+
+        private void BAddIncomeExpense_Click(object sender, RoutedEventArgs e)
+        {
+            frameM.Navigate(new IncomeExpense_add());
+            Title = "Добавление в доходы и расходы";
+        }
+
+        private void BAddSupplier_Click(object sender, RoutedEventArgs e)
+        {
+            frameM.Navigate(new Supplier_add());
+            Title = "Добавление в поставщики";
+        }
+
+        private void BAddTaxRecord_Click(object sender, RoutedEventArgs e)
+        {
+            frameM.Navigate(new TaxRecord_add());
+            Title = "Добавление в налоговый учёт";
+        }
+
+        private void BAddUser_Click(object sender, RoutedEventArgs e)
+        {
+            frameM.Navigate(new User_add());
+            Title = "Добавление в пользователи";
         }
     }
 }

@@ -13,19 +13,16 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Data;
-using System.Configuration;
 using up.entities;
-using Org.BouncyCastle.Tls.Crypto;
 
 namespace up.wins
 {
     /// <summary>
-    /// Логика взаимодействия для Clients_win.xaml
+    /// Логика взаимодействия для User_win.xaml
     /// </summary>
-    public partial class Client_win : Page
+    public partial class User_win : Page
     {
-        public Client_win()
+        public User_win()
         {
             InitializeComponent();
             LoadData();
@@ -33,28 +30,29 @@ namespace up.wins
         private static string connectionString = "server=localhost; port=3306; database=accounting_finance; user=root; password=Nimda123;";
         private void LoadData()
         {
-            List<Client> clients = new List<Client>();
+            List<User> users = new List<User>();
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                MySqlCommand cmd = new MySqlCommand("select id, company_name, address, phone, email from suppliers", conn);
+                MySqlCommand cmd = new MySqlCommand("select id, name, surname, nickname, password, role from users", conn);
 
                 using (MySqlDataReader reader = cmd.ExecuteReader())
                 {
                     while (reader.Read())
                     {
-                        Client record = new Client();
+                        User record = new User();
                         record.id = reader.GetInt32("id");
-                        record.компания = reader.GetString("company_name");
-                        record.адрес = reader.GetString("type");
-                        record.телефон = reader.GetString("phone");
-                        record.почта = reader.GetString("email");
+                        record.имя = reader.GetString("name");
+                        record.фамилия = reader.GetString("surname");
+                        record.ник = reader.GetString("nickname");
+                        record.пароль = reader.GetString("password");
+                        record.роль = reader.GetString("role");
 
-                        clients.Add(record);
+                        users.Add(record);
                     }
                 }
             }
-            DGClient.ItemsSource = clients;
+            DGUser.ItemsSource = users;
         }
     }
 }

@@ -13,19 +13,16 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Data;
-using System.Configuration;
 using up.entities;
-using Org.BouncyCastle.Tls.Crypto;
 
 namespace up.wins
 {
     /// <summary>
-    /// Логика взаимодействия для Clients_win.xaml
+    /// Логика взаимодействия для AuditLog_win.xaml
     /// </summary>
-    public partial class Client_win : Page
+    public partial class AuditLog_win : Page
     {
-        public Client_win()
+        public AuditLog_win()
         {
             InitializeComponent();
             LoadData();
@@ -33,28 +30,28 @@ namespace up.wins
         private static string connectionString = "server=localhost; port=3306; database=accounting_finance; user=root; password=Nimda123;";
         private void LoadData()
         {
-            List<Client> clients = new List<Client>();
+            List<AuditLog> auditLogs= new List<AuditLog>();
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                MySqlCommand cmd = new MySqlCommand("select id, company_name, address, phone, email from suppliers", conn);
+                MySqlCommand cmd = new MySqlCommand("select a.id, u.nickname, a.action, a.description from audit_log as a join users as u on a.user = u.id", conn);
 
                 using (MySqlDataReader reader = cmd.ExecuteReader())
                 {
                     while (reader.Read())
                     {
-                        Client record = new Client();
+                        AuditLog record = new AuditLog();
                         record.id = reader.GetInt32("id");
-                        record.компания = reader.GetString("company_name");
-                        record.адрес = reader.GetString("type");
-                        record.телефон = reader.GetString("phone");
-                        record.почта = reader.GetString("email");
+                        record.дата_время = reader.GetDateTime("datetime");
+                        record.пользователь = reader.GetString("user");
+                        record.действие = reader.GetString("action");
+                        record.описание = reader.GetString("description");
 
-                        clients.Add(record);
+                        auditLogs.Add(record);
                     }
                 }
             }
-            DGClient.ItemsSource = clients;
+            DGAuditLog.ItemsSource = auditLogs;
         }
     }
 }

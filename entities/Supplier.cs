@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace up.entities
 {
-    class Client
+    internal class Supplier
     {
         public int id { get; set; }
         public string компания { get; set; }
