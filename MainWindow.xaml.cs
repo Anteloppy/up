@@ -28,66 +28,37 @@ namespace up
         {
             add_win a = new add_win();
             a.Show();
+            this.Close();
         }
 
-        private void BGroupe_Click(object sender, RoutedEventArgs e)
+        private void BCrop_Click(object sender, RoutedEventArgs e)
         {
-            frameM.Navigate(new Groupe_win());
-            Title = "Группы";
+            frameM.Navigate(new CropWin());
+            Title = "Посевные площади";
         }
 
-        private void BCource_Click(object sender, RoutedEventArgs e)
+        private void BPlantVariety_Click(object sender, RoutedEventArgs e)
         {
-            frameM.Navigate(new Course_win());
-            Title = "Курсы";
+            frameM.Navigate(new PlantVarientyWin());
+            Title = "Сорта растений";
         }
 
-        private void BTeacher_Click(object sender, RoutedEventArgs e)
+        private void BLivestock_Click(object sender, RoutedEventArgs e)
         {
-            frameM.Navigate(new Teacher_win());
-            Title = "Преподаватели";
+            frameM.Navigate(new LivestockWin());
+            Title = "Поголовье скота";
         }
 
-        private void BSchedule_Click(object sender, RoutedEventArgs e)
+        private void BFarmingActivity_Click(object sender, RoutedEventArgs e)
         {
-            frameM.Navigate(new Schedule_win());
-            Title = "Рассписание";
+            frameM.Navigate(new FarmingActivityWin());
+            Title = "Сельскохозяйственные работы";
         }
 
-        private void BAttendance_Click(object sender, RoutedEventArgs e)
+        private void BWorkPlan_Click(object sender, RoutedEventArgs e)
         {
-            frameM.Navigate(new Attendance_win());
-            Title = "Посещаемость";
-        }
-
-        private void BClient_Click(object sender, RoutedEventArgs e)
-        {
-            frameM.Navigate(new Client_win());
-            Title = "Клиенты";
-        }
-
-        private void BExperience_Click(object sender, RoutedEventArgs e)
-        {
-            frameM.Navigate(new Experience_win());
-            Title = "Опыт";
-        }
-
-        private void BLanguage_Click(object sender, RoutedEventArgs e)
-        {
-            frameM.Navigate(new Language_win());
-            Title = "Языки";
-        }
-
-        private void BPayment_Click(object sender, RoutedEventArgs e)
-        {
-            frameM.Navigate(new Payment_win());
-            Title = "Оплата";
-        }
-
-        private void BReport_Click(object sender, RoutedEventArgs e)
-        {
-            frameM.Navigate(new Report());
-            Title = "Отчёты";
+            frameM.Navigate(new WorkPlanWin());
+            Title = "План работ";
         }
     }
 }

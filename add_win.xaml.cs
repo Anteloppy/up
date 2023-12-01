@@ -24,58 +24,42 @@ namespace up
     public partial class add_win : Window
     {
         public add_win() => InitializeComponent();
-        private void BAddGroupe_Click(object sender, RoutedEventArgs e)
+
+        private void BBack_Click(object sender, RoutedEventArgs e)
         {
-            frameM.Navigate(new groupe_add());
-            Title = "Добавление в группы";
+            MainWindow m = new MainWindow();
+            m.Show();
+            this.Close();
         }
 
-        private void BAddCource_Click(object sender, RoutedEventArgs e)
+        private void BAddCrop_Click(object sender, RoutedEventArgs e)
         {
-            frameM.Navigate(new course_add());
-            Title = "Добавление в курсы";
+            frameM.Navigate(new CropAdd());
+            Title = "Добавление в посевные площади";
         }
 
-        private void BAddTeacher_Click(object sender, RoutedEventArgs e)
+        private void BAddPlantVariety_Click(object sender, RoutedEventArgs e)
         {
-            frameM.Navigate(new teacher_add());
-            Title = "Добавление в преподаватели";
+            frameM.Navigate(new PlantVarietyAdd());
+            Title = "Добавление в сорта растений";
         }
 
-        private void BAddSchedule_Click(object sender, RoutedEventArgs e)
+        private void BAddLivestock_Click(object sender, RoutedEventArgs e)
         {
-            frameM.Navigate(new schedule_add());
-            Title = "Добавление в рассписание";
+            frameM.Navigate(new LivestockAdd());
+            Title = "Добавление в поголовье скота";
         }
 
-        private void BAddAttendance_Click(object sender, RoutedEventArgs e)
+        private void BAddFarmingActivity_Click(object sender, RoutedEventArgs e)
         {
-            frameM.Navigate(new attendance_add());
-            Title = "Добавление в посещаемость";
+            frameM.Navigate(new FarmingActivityAdd());
+            Title = "Добавление в сельскохозяйственные работы";
         }
 
-        private void BAddClient_Click(object sender, RoutedEventArgs e)
+        private void BAddWorkPlan_Click(object sender, RoutedEventArgs e)
         {
-            frameM.Navigate(new client_add());
-            Title = "Добавление в клиенты";
-        }
-
-        private void BAddExperience_Click(object sender, RoutedEventArgs e)
-        {
-            frameM.Navigate(new experience_add());
-            Title = "Добавление в опыт";
-        }
-
-        private void BAddLanguage_Click(object sender, RoutedEventArgs e)
-        {
-            frameM.Navigate(new language_add());
-            Title = "Добавление в языки";
-        }
-
-        private void BAddPayment_Click(object sender, RoutedEventArgs e)
-        {
-            frameM.Navigate(new payment_add());
-            Title = "Добавление в оплата";
+            frameM.Navigate(new WorkPlanAdd());
+            Title = "Добавление в план работ";
         }
     }
 }
