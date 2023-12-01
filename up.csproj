@@ -151,9 +151,6 @@
     <Compile Include="add_wins\Account_add.xaml.cs">
       <DependentUpon>Account_add.xaml</DependentUpon>
     </Compile>
-    <Compile Include="add_wins\attendance_add.xaml.cs">
-      <DependentUpon>attendance_add.xaml</DependentUpon>
-    </Compile>
     <Compile Include="add_wins\AuditLog_add.xaml.cs">
       <DependentUpon>AuditLog_add.xaml</DependentUpon>
     </Compile>
@@ -163,38 +160,17 @@
     <Compile Include="add_wins\client_add.xaml.cs">
       <DependentUpon>client_add.xaml</DependentUpon>
     </Compile>
-    <Compile Include="add_wins\course_add.xaml.cs">
-      <DependentUpon>course_add.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="add_wins\experience_add.xaml.cs">
-      <DependentUpon>experience_add.xaml</DependentUpon>
-    </Compile>
     <Compile Include="add_wins\FinancialTransaction_add.xaml.cs">
       <DependentUpon>FinancialTransaction_add.xaml</DependentUpon>
     </Compile>
-    <Compile Include="add_wins\groupe_add.xaml.cs">
-      <DependentUpon>groupe_add.xaml</DependentUpon>
-    </Compile>
     <Compile Include="add_wins\IncomeExpense_add.xaml.cs">
       <DependentUpon>IncomeExpense_add.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="add_wins\language_add.xaml.cs">
-      <DependentUpon>language_add.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="add_wins\payment_add.xaml.cs">
-      <DependentUpon>payment_add.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="add_wins\schedule_add.xaml.cs">
-      <DependentUpon>schedule_add.xaml</DependentUpon>
     </Compile>
     <Compile Include="add_wins\Supplier_add.xaml.cs">
       <DependentUpon>Supplier_add.xaml</DependentUpon>
     </Compile>
     <Compile Include="add_wins\TaxRecord_add.xaml.cs">
       <DependentUpon>TaxRecord_add.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="add_wins\teacher_add.xaml.cs">
-      <DependentUpon>teacher_add.xaml</DependentUpon>
     </Compile>
     <Compile Include="add_wins\User_add.xaml.cs">
       <DependentUpon>User_add.xaml</DependentUpon>
@@ -210,9 +186,6 @@
     <Compile Include="wins\Account_win.xaml.cs">
       <DependentUpon>Account_win.xaml</DependentUpon>
     </Compile>
-    <Compile Include="wins\Attendance_win.xaml.cs">
-      <DependentUpon>Attendance_win.xaml</DependentUpon>
-    </Compile>
     <Compile Include="wins\AuditLog_win.xaml.cs">
       <DependentUpon>AuditLog_win.xaml</DependentUpon>
     </Compile>
@@ -222,41 +195,17 @@
     <Compile Include="wins\Client_win.xaml.cs">
       <DependentUpon>Client_win.xaml</DependentUpon>
     </Compile>
-    <Compile Include="wins\Course_win.xaml.cs">
-      <DependentUpon>Course_win.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="wins\Experience_win.xaml.cs">
-      <DependentUpon>Experience_win.xaml</DependentUpon>
-    </Compile>
     <Compile Include="wins\FinancialTransaction_win.xaml.cs">
       <DependentUpon>FinancialTransaction_win.xaml</DependentUpon>
     </Compile>
-    <Compile Include="wins\Groupe_win.xaml.cs">
-      <DependentUpon>Groupe_win.xaml</DependentUpon>
-    </Compile>
     <Compile Include="wins\IncomeExpense_win.xaml.cs">
       <DependentUpon>IncomeExpense_win.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="wins\Language_win.xaml.cs">
-      <DependentUpon>Language_win.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="wins\Payment_win.xaml.cs">
-      <DependentUpon>Payment_win.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="wins\Report.xaml.cs">
-      <DependentUpon>Report.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="wins\Schedule_win.xaml.cs">
-      <DependentUpon>Schedule_win.xaml</DependentUpon>
     </Compile>
     <Compile Include="wins\Supplier_win.xaml.cs">
       <DependentUpon>Supplier_win.xaml</DependentUpon>
     </Compile>
     <Compile Include="wins\TaxRecord_win.xaml.cs">
       <DependentUpon>TaxRecord_win.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="wins\Teacher_win.xaml.cs">
-      <DependentUpon>Teacher_win.xaml</DependentUpon>
     </Compile>
     <Compile Include="wins\User_win.xaml.cs">
       <DependentUpon>User_win.xaml</DependentUpon>
@@ -266,10 +215,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="add_wins\Account_add.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="add_wins\attendance_add.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -285,35 +230,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="add_wins\course_add.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="add_wins\experience_add.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="add_wins\FinancialTransaction_add.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="add_wins\groupe_add.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="add_wins\IncomeExpense_add.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="add_wins\language_add.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="add_wins\payment_add.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="add_wins\schedule_add.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -325,19 +246,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="add_wins\teacher_add.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="add_wins\User_add.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="wins\Account_win.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="wins\Attendance_win.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -353,14 +266,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="wins\Course_win.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="wins\Experience_win.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -369,15 +274,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="entities\Attendance.cs" />
     <Compile Include="entities\Client.cs" />
-    <Compile Include="entities\Course.cs" />
-    <Compile Include="entities\Experience.cs" />
-    <Compile Include="entities\Groupe.cs" />
-    <Compile Include="entities\Language.cs" />
-    <Compile Include="entities\Payment.cs" />
-    <Compile Include="entities\Schedule.cs" />
-    <Compile Include="entities\Teacher.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -386,27 +283,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="wins\Groupe_win.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="wins\IncomeExpense_win.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="wins\Language_win.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="wins\Payment_win.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="wins\Report.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="wins\Schedule_win.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -415,10 +292,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="wins\TaxRecord_win.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="wins\Teacher_win.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
