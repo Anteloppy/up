@@ -12,5 +12,6 @@ namespace up.entities
         public string AnimalType { get; set; }
         public int Quantity { get; set; }
         public DateOnly AcquisitionDate { get; set; }
+        public string Notes { get; set; }
     }
 }

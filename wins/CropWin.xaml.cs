@@ -30,9 +30,10 @@ namespace up.wins
 
         private void BEdit_Click(object sender, RoutedEventArgs e)
         {
+            Crop si = (Crop)DGCrop.SelectedItem;
             edit_win edit = new edit_win();
             edit.Show();
-            edit.frameM.Navigate(new CropEdit());
+            edit.frameM.Navigate(new CropEdit(si.ID,si.CropName,si.Area,si.PlantingDate,si.ExpectedHarvestDate,si.PlantID));
             Title = "Редактировать посевные площади";
             //this.Close();
         }

@@ -261,15 +261,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="entities\Attendance.cs" />
-    <Compile Include="entities\Client.cs" />
-    <Compile Include="entities\Course.cs" />
-    <Compile Include="entities\Experience.cs" />
-    <Compile Include="entities\Groupe.cs" />
-    <Compile Include="entities\Language.cs" />
-    <Compile Include="entities\Payment.cs" />
-    <Compile Include="entities\Schedule.cs" />
-    <Compile Include="entities\Teacher.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -329,9 +320,6 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="плюс белый.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="плюс чёрный.png" />

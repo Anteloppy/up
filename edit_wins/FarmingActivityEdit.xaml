@@ -5,10 +5,33 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:up.edit_wins"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="FarmingActivityEdit">
+      d:DesignHeight="450" d:DesignWidth="350"
+      Title="FarmingActivityEdit"
+      Background="#FFE8E8E8">
 
     <Grid>
-        
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="0" Orientation="Vertical" Width="350" Margin="5">
+            <StackPanel Orientation="Horizontal" Margin="-5,15,-5,10" HorizontalAlignment="Center">
+                <Button x:Name="BEdit" Content="Изменить" Width="100" Height="30" Padding="5" Click="BEdit_Click" Background="#FFA7FFFD" BorderBrush="#FF3CB1ED"/>
+                <Label Content="сельскохозяйственную работу, где id:" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="5"/>
+                <TextBox x:Name="TBid" Width="15" Padding="5" Height="25" HorizontalAlignment="Center"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Right">
+                <Label Content="название работы" HorizontalAlignment="Center" Padding="5"/>
+                <TextBox x:Name="TBactivity_name" Width="150" Padding="5" Height="25" HorizontalAlignment="Center"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Right">
+                <Label Content="дата начала" HorizontalAlignment="Center" Padding="5"/>
+                <TextBox x:Name="TBstart_date" Width="150" Padding="5" Height="25" HorizontalAlignment="Center"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Right">
+                <Label Content="дата окончания" HorizontalAlignment="Center" Padding="5"/>
+                <TextBox x:Name="TBend_date" Width="150" Padding="5" Height="25" HorizontalAlignment="Center"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Right">
+                <Label Content="описание работы" HorizontalAlignment="Center" Padding="5"/>
+                <TextBox x:Name="TBdescription" Width="150" Padding="5" Height="25" HorizontalAlignment="Center"/>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Page>

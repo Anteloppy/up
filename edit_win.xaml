@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:up"
         mc:Ignorable="d"
-        Title="Изменение" Height="450" Width="530" Icon="/карандаш чёрный.png">
+        Title="Изменение" Height="450" Width="570" Icon="/карандаш чёрный.png">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition MaxWidth="200" MinWidth="190"/>
@@ -15,8 +15,8 @@
         <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="0">
             <Button x:Name="BBack" Content="Вернуться" Width="100" Height="30" Margin="15" Padding="5" Click="BBack_Click" Background="#FFFFDFDF" BorderBrush="#FFBB6A6A"/>
             <Label Content="Изменить в:" HorizontalAlignment="Center" Padding="5" Margin="0,0,0,5"/>
-            <Button x:Name="BEditCrop" Content="Посевных площадях" Width="120" Height="30" Margin="5" Padding="5" Click="BEditCrop_Click"/>
-            <Button x:Name="BEditPlantVariety" Content="Сортах растений" Width="100" Height="30" Margin="5" Padding="5" Click="BEditPlantVariety_Click"/>
+            <Button x:Name="BEditCrop" Content="Посевных площадях" Width="125" Height="30" Margin="5" Padding="5" Click="BEditCrop_Click"/>
+            <Button x:Name="BEditPlantVariety" Content="Сортах растений" Width="105" Height="30" Margin="5" Padding="5" Click="BEditPlantVariety_Click"/>
             <Button x:Name="BEditLivestock" Content="Поголовье скота" Width="110" Height="30" Margin="5" Padding="5" Click="BEditLivestock_Click"/>
             <Button x:Name="BEditFarmingActivity" Content="Сельскохозяйственных работах" Width="190" Height="30" Margin="5" Padding="5" Click="BEditFarmingActivity_Click"/>
             <Button x:Name="BEditWorkPlan" Content="Плане работ" Width="100" Height="30" Margin="5" Padding="5" Click="BEditWorkPlan_Click"/>

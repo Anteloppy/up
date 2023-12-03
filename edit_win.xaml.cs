@@ -41,12 +41,12 @@ namespace up
             frameM.Navigate(new PlantVarietyEdit());
             Title = "Изменение в сортах растений";
         }
-        private void BEditFarmingActivity_Click(object sender, RoutedEventArgs e)
+        private void BEditLivestock_Click(object sender, RoutedEventArgs e)
         {
             frameM.Navigate(new LivestockEdit());
             Title = "Изменение в поголовье скота";
         }
-        private void BEditLivestock_Click(object sender, RoutedEventArgs e)
+        private void BEditFarmingActivity_Click(object sender, RoutedEventArgs e)
         {
             frameM.Navigate(new FarmingActivityEdit());
             Title = "Изменение в сельскохозяйственныех работах";
