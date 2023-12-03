@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:up"
         mc:Ignorable="d"
-        Title="AddWindow" Height="410" Width="500">
+        Title="Окно добавления" Height="410" Width="500" Icon="/free-icon-font-plus-3917172.png">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition MaxWidth="200" MinWidth="190"/>

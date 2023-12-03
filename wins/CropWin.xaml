@@ -15,7 +15,7 @@
             <RowDefinition Height="10"/>
         </Grid.RowDefinitions>
         <StackPanel>
-            
+           
         </StackPanel>
         <DataGrid x:Name="DGAttendance" Grid.Row="1" AutoGenerateColumns="True"/>
     </Grid>
