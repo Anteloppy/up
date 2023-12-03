@@ -79,5 +79,37 @@ namespace up.wins
                 MessageBox.Show("план работ с id " + si.ID + "  удалён");
             }
         }
+
+        private void TBfind_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string ts = TBfind.Text;
+            if (ts != "")
+            {
+                List<WorkPlan> find = new List<WorkPlan>();
+                using (MySqlConnection conn = new MySqlConnection(connectionString))
+                {
+                    conn.Open();
+                    string search = "select * from WorkPlans where PlanName like @ts;";
+
+                    MySqlCommand cmd = new MySqlCommand(search, conn);
+                    cmd.Parameters.AddWithValue("@ts", "%" + ts + "%");
+
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            WorkPlan record = new WorkPlan();
+                            record.ID = reader.GetInt32("ID");
+                            record.PlanName = reader.GetString("PlanName");
+                            record.PlanDate = reader.GetString("PlanDate");
+
+                            find.Add(record);
+                        }
+                    }
+                }
+                DGWorkPlan.ItemsSource = find;
+            }
+            else LoadData();
+        }
     }
 }

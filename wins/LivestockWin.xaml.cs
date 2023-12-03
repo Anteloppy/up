@@ -81,5 +81,39 @@ namespace up.wins
                 MessageBox.Show("поголовье скота с id " + si.ID + "  удалено");
             }
         }
+
+        private void TBfind_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string ts = TBfind.Text;
+            if (ts != "")
+            {
+                List<Livestock> find = new List<Livestock>();
+                using (MySqlConnection conn = new MySqlConnection(connectionString))
+                {
+                    conn.Open();
+                    string search = "select * from Livestock where AnimalType like @ts;";
+
+                    MySqlCommand cmd = new MySqlCommand(search, conn);
+                    cmd.Parameters.AddWithValue("@ts", "%" + ts + "%");
+
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Livestock record = new Livestock();
+                            record.ID = reader.GetInt32("ID");
+                            record.AnimalType = reader.GetString("AnimalType");
+                            record.Quantity = reader.GetInt32("Quantity");
+                            record.AcquisitionDate = reader.GetString("AcquisitionDate");
+                            record.Notes = reader.GetString("Notes");
+
+                            find.Add(record);
+                        }
+                    }
+                }
+                DGLivestock.ItemsSource = find;
+            }
+            else LoadData();
+        }
     }
 }

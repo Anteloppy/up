@@ -83,5 +83,40 @@ namespace up.wins
                 MessageBox.Show("посевная площадь с id " + si.ID + "  удалена");
             }
         }
+
+        private void TBfind_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string ts = TBfind.Text;
+            if (ts != "")
+            {
+                List<Crop> find = new List<Crop>();
+                using (MySqlConnection conn = new MySqlConnection(connectionString))
+                {
+                    conn.Open();
+                    string search = "select * from Crops where CropName like @ts;";
+
+                    MySqlCommand cmd = new MySqlCommand(search, conn);
+                    cmd.Parameters.AddWithValue("@ts", "%" + ts + "%");
+
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Crop record = new Crop();
+                            record.ID = reader.GetInt32("ID");
+                            record.CropName = reader.GetString("CropName");
+                            record.Area = reader.GetFloat("Area");
+                            record.PlantingDate = reader.GetString("PlantingDate");
+                            record.ExpectedHarvestDate = reader.GetString("ExpectedHarvestDate");
+                            record.PlantID = reader.GetInt32("VarietyID");
+
+                            find.Add(record);
+                        }
+                    }
+                }
+                DGCrop.ItemsSource = find;
+            }
+            else LoadData();
+        }
     }
 }

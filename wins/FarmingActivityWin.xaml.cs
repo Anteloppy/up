@@ -81,5 +81,39 @@ namespace up.wins
                 MessageBox.Show("сельскохозяйственная работа с id " + si.ID + "  удалена");
             }
         }
+
+        private void TBfind_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string ts = TBfind.Text;
+            if (ts != "")
+            {
+                List<FarmingActivity> find = new List<FarmingActivity>();
+                using (MySqlConnection conn = new MySqlConnection(connectionString))
+                {
+                    conn.Open();
+                    string search = "select * from FarmingActivities where ActivityName like @ts;";
+
+                    MySqlCommand cmd = new MySqlCommand(search, conn);
+                    cmd.Parameters.AddWithValue("@ts", "%" + ts + "%");
+
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            FarmingActivity record = new FarmingActivity();
+                            record.ID = reader.GetInt32("ID");
+                            record.ActivityName = reader.GetString("ActivityName");
+                            record.StartDate = reader.GetString("StartDate");
+                            record.EndDate = reader.GetString("EndDate");
+                            record.Description = reader.GetString("Description");
+
+                            find.Add(record);
+                        }
+                    }
+                }
+                DGFarmingActivity.ItemsSource = find;
+            }
+            else LoadData();
+        }
     }
 }
