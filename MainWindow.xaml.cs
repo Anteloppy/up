@@ -60,5 +60,12 @@ namespace up
             frameM.Navigate(new WorkPlanWin());
             Title = "План работ";
         }
+
+        private void BEdit_Click(object sender, RoutedEventArgs e)
+        {
+            edit_win edit = new edit_win();
+            edit.Show();
+            //this.Close();
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,17 @@ namespace up.add_wins
         public WorkPlanAdd()
         {
             InitializeComponent();
+        }
+        private static string connectionString = "server=localhost; port=3306; database=FarmManagement; user=root; password=Nimda123;";
+        private void Add_Click(object sender, RoutedEventArgs e)
+        {
+            string add = "insert into WorkPlans(PlanName, PlanDate) values('" + TBplan_name.Text + "', '" + DateOnly.FromDateTime(Convert.ToDateTime(TBplan_date)) + "); commit;";
+            MySqlConnection conn = new MySqlConnection(connectionString);
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand(add, conn);
+            cmd.ExecuteNonQuery();
+            conn.Close();
+            MessageBox.Show("план работ добавлен");
         }
     }
 }

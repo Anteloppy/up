@@ -23,12 +23,62 @@ namespace up
     /// </summary>
     public partial class add_win : Window
     {
-        public add_win() => InitializeComponent();
+        int a;
+        public add_win()
+        {
+            InitializeComponent();
+            switch(a)
+            {
+                case 1:
+                    frameM.Navigate(new CropAdd());
+                    Title = "Добавление в посевные площади";
+                    break;
+                case 2:
+                    frameM.Navigate(new PlantVarietyAdd());
+                    Title = "Добавление в сорта растений";
+                    break;
+                case 3:
+                    frameM.Navigate(new LivestockAdd());
+                    Title = "Добавление в поголовье скота";
+                    break;
+                case 4:
+                    frameM.Navigate(new FarmingActivityAdd());
+                    Title = "Добавление в сельскохозяйственные работы";
+                    break;
+                case 5:
+                    frameM.Navigate(new WorkPlanAdd());
+                    Title = "Добавление в план работ";
+                    break;
+            }
+        }
 
         private void BBack_Click(object sender, RoutedEventArgs e)
         {
             MainWindow m = new MainWindow();
             m.Show();
+            switch (a)
+            {
+                case 1:
+                    m.frameM.Navigate(new CropWin());
+                    Title = "Посевные площади";
+                    break;
+                case 2:
+                    m.frameM.Navigate(new PlantVarientyWin());
+                    Title = "Сорта растений";
+                    break;
+                case 3:
+                    m.frameM.Navigate(new LivestockWin());
+                    Title = "Поголовье скота";
+                    break;
+                case 4:
+                    m.frameM.Navigate(new FarmingActivityWin());
+                    Title = "Сельскохозяйственные работы";
+                    break;
+                case 5:
+                    m.frameM.Navigate(new WorkPlanWin());
+                    Title = "План работ";
+                    break;
+            }
             this.Close();
         }
 

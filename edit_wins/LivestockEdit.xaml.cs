@@ -13,26 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace up.wins
+namespace up.edit_wins
 {
     /// <summary>
-    /// Логика взаимодействия для WorkPlanWin.xaml
+    /// Логика взаимодействия для LivestockEdit.xaml
     /// </summary>
-    public partial class WorkPlanWin : Page
+    public partial class LivestockEdit : Page
     {
-        public WorkPlanWin()
+        public LivestockEdit()
         {
             InitializeComponent();
-        }
-
-        private void BEdit_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void BDelete_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

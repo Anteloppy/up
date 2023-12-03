@@ -9,6 +9,17 @@
       Title="FarmingActivityWin">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <StackPanel Margin="5" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button x:Name="BEdit" Content="Редактирование" Width="120" Height="30" Margin="5" Padding="5" Click="BEdit_Click"/>
+            <Button x:Name="BDelete" Content="Удаление" Width="120" Height="30" Margin="5" Padding="5" Click="BDelete_Click" Background="#FFFF6363" BorderBrush="#FFA01313"/>
+            <Label Content="Поиск:" Margin="15,0,10,0" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" FontSize="15"/>
+            <TextBox x:Name="TBfind" Height="30" Width="120"/>
+        </StackPanel>
+        <DataGrid x:Name="DGFarmingActivity" Grid.Row="1" AutoGenerateColumns="True"/>
     </Grid>
 </Page>

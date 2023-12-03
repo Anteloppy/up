@@ -5,10 +5,29 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:up.add_wins"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="FarmingActivityAdd">
+      d:DesignHeight="450" d:DesignWidth="270"
+      Title="FarmingActivityAdd"
+      Background="#FFE8E8E8">
 
     <Grid>
-        
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="0" Orientation="Vertical" Width="300" Margin="5">
+            <Button x:Name="BAdd" Content="Добавление" Width="100" Height="30" Margin="10" Padding="5" Click="Add_Click" Background="#FF80FF54" BorderBrush="#FF217F00"/>
+            <StackPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Right">
+                <Label Content="название работы" HorizontalAlignment="Center" Padding="5"/>
+                <TextBox x:Name="TBactivity_name" Width="150" Padding="5" Height="25" HorizontalAlignment="Center"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Right">
+                <Label Content="дата начала" HorizontalAlignment="Center" Padding="5"/>
+                <TextBox x:Name="TBstart_date" Width="150" Padding="5" Height="25" HorizontalAlignment="Center"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Right">
+                <Label Content="дата окончания" HorizontalAlignment="Center" Padding="5"/>
+                <TextBox x:Name="TBend_date" Width="150" Padding="5" Height="25" HorizontalAlignment="Center"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Right">
+                <Label Content="описание работы" HorizontalAlignment="Center" Padding="5"/>
+                <TextBox x:Name="TBdescription" Width="150" Padding="5" Height="25" HorizontalAlignment="Center"/>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Page>

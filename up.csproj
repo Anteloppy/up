@@ -148,94 +148,55 @@
     <Compile Include="add_win.xaml.cs">
       <DependentUpon>add_win.xaml</DependentUpon>
     </Compile>
-    <Compile Include="add_wins\attendance_add.xaml.cs">
-      <DependentUpon>attendance_add.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="add_wins\client_add.xaml.cs">
-      <DependentUpon>client_add.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="add_wins\course_add.xaml.cs">
-      <DependentUpon>course_add.xaml</DependentUpon>
-    </Compile>
     <Compile Include="add_wins\CropAdd.xaml.cs">
       <DependentUpon>CropAdd.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="add_wins\experience_add.xaml.cs">
-      <DependentUpon>experience_add.xaml</DependentUpon>
     </Compile>
     <Compile Include="add_wins\FarmingActivityAdd.xaml.cs">
       <DependentUpon>FarmingActivityAdd.xaml</DependentUpon>
     </Compile>
-    <Compile Include="add_wins\groupe_add.xaml.cs">
-      <DependentUpon>groupe_add.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="add_wins\language_add.xaml.cs">
-      <DependentUpon>language_add.xaml</DependentUpon>
-    </Compile>
     <Compile Include="add_wins\LivestockAdd.xaml.cs">
       <DependentUpon>LivestockAdd.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="add_wins\payment_add.xaml.cs">
-      <DependentUpon>payment_add.xaml</DependentUpon>
     </Compile>
     <Compile Include="add_wins\PlantVarietyAdd.xaml.cs">
       <DependentUpon>PlantVarietyAdd.xaml</DependentUpon>
     </Compile>
-    <Compile Include="add_wins\schedule_add.xaml.cs">
-      <DependentUpon>schedule_add.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="add_wins\teacher_add.xaml.cs">
-      <DependentUpon>teacher_add.xaml</DependentUpon>
-    </Compile>
     <Compile Include="add_wins\WorkPlanAdd.xaml.cs">
       <DependentUpon>WorkPlanAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="edit_win.xaml.cs">
+      <DependentUpon>edit_win.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="edit_wins\CropEdit.xaml.cs">
+      <DependentUpon>CropEdit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="edit_wins\FarmingActivityEdit.xaml.cs">
+      <DependentUpon>FarmingActivityEdit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="edit_wins\LivestockEdit.xaml.cs">
+      <DependentUpon>LivestockEdit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="edit_wins\PlantVarietyEdit.xaml.cs">
+      <DependentUpon>PlantVarietyEdit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="edit_wins\WorkPlanEdit.xaml.cs">
+      <DependentUpon>WorkPlanEdit.xaml</DependentUpon>
     </Compile>
     <Compile Include="entities\Crop.cs" />
     <Compile Include="entities\FarmingActivity.cs" />
     <Compile Include="entities\Livestock.cs" />
     <Compile Include="entities\PlantVarienty.cs" />
     <Compile Include="entities\WorkPlan.cs" />
-    <Compile Include="wins\Attendance_win.xaml.cs">
-      <DependentUpon>Attendance_win.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="wins\Client_win.xaml.cs">
-      <DependentUpon>Client_win.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="wins\Course_win.xaml.cs">
-      <DependentUpon>Course_win.xaml</DependentUpon>
-    </Compile>
     <Compile Include="wins\CropWin.xaml.cs">
       <DependentUpon>CropWin.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="wins\Experience_win.xaml.cs">
-      <DependentUpon>Experience_win.xaml</DependentUpon>
     </Compile>
     <Compile Include="wins\FarmingActivityWin.xaml.cs">
       <DependentUpon>FarmingActivityWin.xaml</DependentUpon>
     </Compile>
-    <Compile Include="wins\Groupe_win.xaml.cs">
-      <DependentUpon>Groupe_win.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="wins\Language_win.xaml.cs">
-      <DependentUpon>Language_win.xaml</DependentUpon>
-    </Compile>
     <Compile Include="wins\LivestockWin.xaml.cs">
       <DependentUpon>LivestockWin.xaml</DependentUpon>
     </Compile>
-    <Compile Include="wins\Payment_win.xaml.cs">
-      <DependentUpon>Payment_win.xaml</DependentUpon>
-    </Compile>
     <Compile Include="wins\PlantVarientyWin.xaml.cs">
       <DependentUpon>PlantVarientyWin.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="wins\Report.xaml.cs">
-      <DependentUpon>Report.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="wins\Schedule_win.xaml.cs">
-      <DependentUpon>Schedule_win.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="wins\Teacher_win.xaml.cs">
-      <DependentUpon>Teacher_win.xaml</DependentUpon>
     </Compile>
     <Compile Include="wins\WorkPlanWin.xaml.cs">
       <DependentUpon>WorkPlanWin.xaml</DependentUpon>
@@ -244,23 +205,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="add_wins\attendance_add.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="add_wins\client_add.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="add_wins\course_add.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="add_wins\CropAdd.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="add_wins\experience_add.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -268,19 +213,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="add_wins\groupe_add.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="add_wins\language_add.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="add_wins\LivestockAdd.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="add_wins\payment_add.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -288,35 +221,35 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="add_wins\schedule_add.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="add_wins\teacher_add.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="add_wins\WorkPlanAdd.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="wins\Attendance_win.xaml">
+    <Page Include="edit_win.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="wins\Client_win.xaml">
+    <Page Include="edit_wins\CropEdit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="wins\Course_win.xaml">
+    <Page Include="edit_wins\FarmingActivityEdit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="edit_wins\LivestockEdit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="edit_wins\PlantVarietyEdit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="edit_wins\WorkPlanEdit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="wins\CropWin.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="wins\Experience_win.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -345,35 +278,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="wins\Groupe_win.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="wins\Language_win.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="wins\LivestockWin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="wins\Payment_win.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="wins\PlantVarientyWin.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="wins\Report.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="wins\Schedule_win.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="wins\Teacher_win.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -421,6 +330,17 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="плюс белый.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="плюс чёрный.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="окно чёрное.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="карандаш чёрный.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
