@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using MySqlX.XDevAPI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,6 +27,34 @@ namespace up.wins
         public CropWin()
         {
             InitializeComponent();
+            LoadData();
+        }
+
+        private void LoadData()
+        {
+            List<Crop> crops = new List<Crop>();
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand("select * from Crops", conn);
+
+                using (MySqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Crop record = new Crop();
+                        record.ID = reader.GetInt32("ID");
+                        record.CropName = reader.GetString("CropName");
+                        record.Area = reader.GetFloat("Area");
+                        record.PlantingDate = reader.GetString("PlantingDate");
+                        record.ExpectedHarvestDate = reader.GetString("ExpectedHarvestDate");
+                        record.PlantID = reader.GetInt32("VarietyID");
+
+                        crops.Add(record);
+                    }
+                }
+            }
+            DGCrop.ItemsSource = crops;
         }
 
         private void BEdit_Click(object sender, RoutedEventArgs e)

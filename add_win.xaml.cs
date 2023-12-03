@@ -63,7 +63,7 @@ namespace up
                     Title = "Посевные площади";
                     break;
                 case 2:
-                    m.frameM.Navigate(new PlantVarientyWin());
+                    m.frameM.Navigate(new PlantVarietyWin());
                     Title = "Сорта растений";
                     break;
                 case 3:

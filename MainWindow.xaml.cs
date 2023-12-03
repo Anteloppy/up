@@ -39,7 +39,7 @@ namespace up
 
         private void BPlantVariety_Click(object sender, RoutedEventArgs e)
         {
-            frameM.Navigate(new PlantVarientyWin());
+            frameM.Navigate(new PlantVarietyWin());
             Title = "Сорта растений";
         }
 

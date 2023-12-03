@@ -10,8 +10,8 @@ namespace up.entities
     {
         public int ID { get; set; }
         public string ActivityName { get; set; }
-        public DateOnly StartDate { get; set; }
-        public DateOnly EndDate { get; set; }
+        public string StartDate { get; set; } //Date
+        public string EndDate { get; set; } //Date
         public string Description { get; set; }
     }
 }

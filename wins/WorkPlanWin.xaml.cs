@@ -26,13 +26,39 @@ namespace up.wins
         public WorkPlanWin()
         {
             InitializeComponent();
+            LoadData();
+        }
+
+        private void LoadData()
+        {
+            List<WorkPlan> plans = new List<WorkPlan>();
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand("select * from WorkPlans", conn);
+
+                using (MySqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        WorkPlan record = new WorkPlan();
+                        record.ID = reader.GetInt32("ID");
+                        record.PlanName = reader.GetString("PlanName");
+                        record.PlanDate = reader.GetString("PlanDate");
+
+                        plans.Add(record);
+                    }
+                }
+            }
+            DGWorkPlan.ItemsSource = plans;
         }
 
         private void BEdit_Click(object sender, RoutedEventArgs e)
         {
+            WorkPlan si = (WorkPlan)DGWorkPlan.SelectedItem;
             edit_win edit = new edit_win();
             edit.Show();
-            edit.frameM.Navigate(new WorkPlanEdit());
+            edit.frameM.Navigate(new WorkPlanEdit(si.ID,si.PlanName,si.PlanDate));
             Title = "Редактировать план работ";
             //this.Close();
         }

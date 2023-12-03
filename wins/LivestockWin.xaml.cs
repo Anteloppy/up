@@ -26,13 +26,41 @@ namespace up.wins
         public LivestockWin()
         {
             InitializeComponent();
+            LoadData();
+        }
+
+        private void LoadData()
+        {
+            List<Livestock> livestocks = new List<Livestock>();
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand("select * from Livestock", conn);
+
+                using (MySqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Livestock record = new Livestock();
+                        record.ID = reader.GetInt32("ID");
+                        record.AnimalType = reader.GetString("AnimalType");
+                        record.Quantity = reader.GetInt32("Quantity");
+                        record.AcquisitionDate = reader.GetString("AcquisitionDate");
+                        record.Notes = reader.GetString("Notes");
+
+                        livestocks.Add(record);
+                    }
+                }
+            }
+            DGLivestock.ItemsSource = livestocks;
         }
 
         private void BEdit_Click(object sender, RoutedEventArgs e)
         {
+            Livestock si = (Livestock)DGLivestock.SelectedItem;
             edit_win edit = new edit_win();
             edit.Show();
-            edit.frameM.Navigate(new LivestockEdit());
+            edit.frameM.Navigate(new LivestockEdit(si.ID, si.AnimalType,si.Quantity,si.AcquisitionDate,si.Notes));
             Title = "Редактировать поголовье скота";
             //this.Close();
         }

@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using up.wins;
 
 namespace up.edit_wins
 {
@@ -37,14 +38,14 @@ namespace up.edit_wins
         private void BEdit_Click(object sender, RoutedEventArgs e)
         {
             int id = Convert.ToInt32(TBid.Text);
-            string edit = "update PlantVarieties(VarietyName, PlantType, Description) set values('" + TBvariety_name.Text + "', '" + TBplant_type.Text + "', '" + TBdescription.Text + "') where ID = @id; commit;";
+            string edit = "update PlantVarieties set VarietyName = '" + TBvariety_name.Text + "', PlantType = '" + TBplant_type.Text + "', Description = '" + TBdescription.Text + "' where ID = @id; commit;";
             MySqlConnection conn = new MySqlConnection(connectionString);
             conn.Open();
             MySqlCommand cmd = new MySqlCommand(edit, conn);
             cmd.Parameters.AddWithValue("@ID", id);
             cmd.ExecuteNonQuery();
             conn.Close();
-            MessageBox.Show("сорт растения с id" + id + " изменён");
+            MessageBox.Show("сорт растения с ID " + id + " изменён");
         }
     }
 }

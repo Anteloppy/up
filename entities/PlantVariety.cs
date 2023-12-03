@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace up.entities
 {
-    internal class PlantVarienty
+    internal class PlantVariety
     {
         public int ID { get; set; }
         public string VarietyName { get; set; }

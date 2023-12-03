@@ -184,7 +184,7 @@
     <Compile Include="entities\Crop.cs" />
     <Compile Include="entities\FarmingActivity.cs" />
     <Compile Include="entities\Livestock.cs" />
-    <Compile Include="entities\PlantVarienty.cs" />
+    <Compile Include="entities\PlantVariety.cs" />
     <Compile Include="entities\WorkPlan.cs" />
     <Compile Include="wins\CropWin.xaml.cs">
       <DependentUpon>CropWin.xaml</DependentUpon>
@@ -195,8 +195,8 @@
     <Compile Include="wins\LivestockWin.xaml.cs">
       <DependentUpon>LivestockWin.xaml</DependentUpon>
     </Compile>
-    <Compile Include="wins\PlantVarientyWin.xaml.cs">
-      <DependentUpon>PlantVarientyWin.xaml</DependentUpon>
+    <Compile Include="wins\PlantVarietyWin.xaml.cs">
+      <DependentUpon>PlantVarietyWin.xaml</DependentUpon>
     </Compile>
     <Compile Include="wins\WorkPlanWin.xaml.cs">
       <DependentUpon>WorkPlanWin.xaml</DependentUpon>
@@ -273,7 +273,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="wins\PlantVarientyWin.xaml">
+    <Page Include="wins\PlantVarietyWin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

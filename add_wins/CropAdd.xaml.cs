@@ -28,7 +28,7 @@ namespace up.add_wins
         private static string connectionString = "server=localhost; port=3306; database=FarmManagement; user=root; password=Nimda123;";
         private void Add_Click(object sender, RoutedEventArgs e)
         {
-            string add = "insert into Crops(CropName, Area, PlantingDate, ExpectedHarvestDate, VarietyID) values('" + TBcrop_name.Text + "', " + Convert.ToDouble(TBarea.Text) + ", '" + DateOnly.FromDateTime(Convert.ToDateTime(TBplanting_date)) + "', '" + DateOnly.FromDateTime(Convert.ToDateTime(TBexpected_harvest_date.Text)) + "', " + Convert.ToInt32(TBvariety_id.Text) + "); commit;";
+            string add = "insert into Crops(CropName, Area, PlantingDate, ExpectedHarvestDate, VarietyID) values('" + TBcrop_name.Text + "', " + Convert.ToDouble(TBarea.Text) + ", '" + TBplanting_date.Text + "', '" + TBexpected_harvest_date.Text + "', " + Convert.ToInt32(TBvariety_id.Text) + "); commit;";
             MySqlConnection conn = new MySqlConnection(connectionString);
             conn.Open();
             MySqlCommand cmd = new MySqlCommand(add, conn);

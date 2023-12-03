@@ -10,6 +10,6 @@ namespace up.entities
     {
         public int ID { get; set; }
         public string PlanName { get; set; }
-        public DateOnly PlanDate { get; set; }
+        public string PlanDate { get; set; } //Date
     }
 }

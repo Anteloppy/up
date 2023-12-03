@@ -26,13 +26,41 @@ namespace up.wins
         public FarmingActivityWin()
         {
             InitializeComponent();
+            LoadData();
+        }
+
+        private void LoadData()
+        {
+            List<FarmingActivity> activities = new List<FarmingActivity>();
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand("select * from FarmingActivities", conn);
+
+                using (MySqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        FarmingActivity record = new FarmingActivity();
+                        record.ID = reader.GetInt32("ID");
+                        record.ActivityName = reader.GetString("ActivityName");
+                        record.StartDate = reader.GetString("StartDate");
+                        record.EndDate = reader.GetString("EndDate");
+                        record.Description = reader.GetString("Description");
+
+                        activities.Add(record);
+                    }
+                }
+            }
+            DGFarmingActivity.ItemsSource = activities;
         }
 
         private void BEdit_Click(object sender, RoutedEventArgs e)
         {
+            FarmingActivity si = (FarmingActivity)DGFarmingActivity.SelectedItem;
             edit_win edit = new edit_win();
             edit.Show();
-            edit.frameM.Navigate(new FarmingActivityEdit());
+            edit.frameM.Navigate(new FarmingActivityEdit(si.ID, si.ActivityName,si.StartDate,si.EndDate,si.Description));
             Title = "Редактировать сельскохозяйственные работы";
             //this.Close();
         }
