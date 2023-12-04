@@ -36,7 +36,7 @@ namespace up.wins
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                MySqlCommand cmd = new MySqlCommand("select * from Crops", conn);
+                MySqlCommand cmd = new MySqlCommand("select C.ID, C.CropName, C.Area, C.PlantingDate, C.ExpectedHarvestDate, P.VarietyName as VarietyName from Crops as C join PlantVarieties as P on C.VarietyID = P.ID", conn);
 
                 using (MySqlDataReader reader = cmd.ExecuteReader())
                 {
@@ -48,7 +48,7 @@ namespace up.wins
                         record.Area = reader.GetFloat("Area");
                         record.PlantingDate = reader.GetString("PlantingDate");
                         record.ExpectedHarvestDate = reader.GetString("ExpectedHarvestDate");
-                        record.PlantID = reader.GetInt32("VarietyID");
+                        record.PlantID = reader.GetString("VarietyName");
 
                         crops.Add(record);
                     }
@@ -93,7 +93,7 @@ namespace up.wins
                 using (MySqlConnection conn = new MySqlConnection(connectionString))
                 {
                     conn.Open();
-                    string search = "select * from Crops where CropName like @ts;";
+                    string search = "select C.ID, C.CropName, C.Area, C.PlantingDate, C.ExpectedHarvestDate, P.VarietyName as VarietyName from Crops as C join PlantVarieties as P on C.VarietyID = P.ID where C.CropName like @ts;";
 
                     MySqlCommand cmd = new MySqlCommand(search, conn);
                     cmd.Parameters.AddWithValue("@ts", "%" + ts + "%");
@@ -108,7 +108,7 @@ namespace up.wins
                             record.Area = reader.GetFloat("Area");
                             record.PlantingDate = reader.GetString("PlantingDate");
                             record.ExpectedHarvestDate = reader.GetString("ExpectedHarvestDate");
-                            record.PlantID = reader.GetInt32("VarietyID");
+                            record.PlantID = reader.GetString("VarietyName");
 
                             find.Add(record);
                         }

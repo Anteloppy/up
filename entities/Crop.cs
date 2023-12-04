@@ -13,6 +13,6 @@ namespace up.entities
         public float Area { get; set; }
         public string PlantingDate { get; set; } //Date
         public string ExpectedHarvestDate { get; set; } //Date
-        public int PlantID { get; set; }
+        public string PlantID { get; set; } //f id
     }
 }

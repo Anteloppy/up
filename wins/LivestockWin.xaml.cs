@@ -104,8 +104,8 @@ namespace up.wins
                             record.ID = reader.GetInt32("ID");
                             record.AnimalType = reader.GetString("AnimalType");
                             record.Quantity = reader.GetInt32("Quantity");
-                            record.AcquisitionDate = reader.GetString("AcquisitionDate");
-                            record.Notes = reader.GetString("Notes");
+                            record.AcquisitionDate = reader.GetString("AcquisitionDate ");
+                            record.Notes = reader.GetString("Description");
 
                             find.Add(record);
                         }

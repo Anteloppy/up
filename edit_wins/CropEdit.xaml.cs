@@ -26,7 +26,7 @@ namespace up.edit_wins
         {
             InitializeComponent();
         }
-        public CropEdit(int ID, string CropName, float Area, string PlantingDate, string ExpectedHarvestDate, int PlantID)
+        public CropEdit(int ID, string CropName, float Area, string PlantingDate, string ExpectedHarvestDate, string PlantID)
         {
             InitializeComponent();
             TBid.Text = Convert.ToString(ID);
@@ -34,7 +34,7 @@ namespace up.edit_wins
             TBarea.Text = Convert.ToString(Area);
             TBplanting_date.Text = PlantingDate;
             TBexpected_harvest_date.Text = ExpectedHarvestDate;
-            TBvariety_id.Text = Convert.ToString(PlantID);
+            TBvariety_id.Text = PlantID;
         }
         private static string connectionString = "server=localhost; port=3306; database=FarmManagement; user=root; password=Nimda123;";
         private void BEdit_Click(object sender, RoutedEventArgs e)
